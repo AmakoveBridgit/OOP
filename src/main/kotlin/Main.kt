@@ -23,7 +23,7 @@ fun main(){
     println(myBook.pages)
 
 //
-println(ageCalculation(1,2,3,5))
+println(ageCalculation(arrayOf(20,30,35,40,20)))
 
 
 
@@ -59,11 +59,13 @@ class Car(var make: String,var model: String,var registration: String,var speed:
 //Data class
 data class Book(var title: String,var pages: Int,var author: String,var year: Int)
 data class Agestats(var max:Int,var min:Int,var median:Double)
-fun ageCalculation(age:Array<Int>):Agestats{
-  var min=age.min()
-    var max=age.max()
-    val median=age.average()
-    val stats=Agestats(min,max,median)}
+fun ageCalculation(age:Array<Int>):Agestats {
+    var min = age.min()
+    var max = age.max()
+    val median = age.average()
+    val stats = Agestats(min, max, median)
+return stats
+}
 //    println(ageCalculation(1,2,3))
 
 
